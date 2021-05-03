@@ -97,7 +97,7 @@ body {
 	background-color:#ccc2a6;
 }
 
-.sfx-list textarea {
+.textarea {
   background: linear-gradient(to right, #fff, rgb(221, 221, 221));
   background-color: #e6e6e6;
   border:2px solid #333029;
@@ -111,11 +111,16 @@ body {
   overflow: hidden;
 }
 
-.sfx-list textarea:disabled {
+.correct {
   background: linear-gradient(to right, #ffde7c, #e4cb5d);
   background-color: #ffde7c;
   color:#1b1b1b;
   font-weight: 500;
+}
+
+.spoiler {
+  background: linear-gradient(to right, #b68463, #91633d);
+  color: black;
 }
 
 .span-id {
@@ -141,6 +146,37 @@ body {
 
 .correct-amount {
   padding-left: 5px;
+}
+
+.completed {
+  color:#88ec59;
+  font-weight: 500;
+}
+
+.spoiler-button {
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+  border-color: 1px solid #fff;
+	border: 2px solid #534c44;
+	cursor: pointer;
+	color: #000000;
+	text-decoration: none;
+  transition: all 0.2s ease 0s;
+  background: linear-gradient(to left, rgb(233, 173, 117) 50%, rgb(180, 119, 91) 50%) right;
+  background-size: 200%;
+  transition: .5s linear;
+}
+
+.spoiler-button:hover {
+  transition-duration: 0.2s;
+  background-color: #4b4948;
+}
+
+.spoiler-button:active {
+  transition-duration: 2s;
+  background-position: left;
 }
 
 .footer {
