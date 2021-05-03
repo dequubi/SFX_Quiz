@@ -19,7 +19,7 @@ body {
 }
 
 .page-wrapper {
-  width: 1024px;
+  width: 1200px;
   margin: 0 auto;
   filter: drop-shadow(0 0 15px rgb(0, 0, 0));
   background-color: #292726;
@@ -27,7 +27,7 @@ body {
 
 .container {
   color: #fff;
-  max-width: 1024px;
+  max-width: 1200px;
 }
 
 .header {
@@ -111,6 +111,13 @@ body {
   overflow: hidden;
 }
 
+.sfx-list textarea:disabled {
+  background: linear-gradient(to right, #ffde7c, #e4cb5d);
+  background-color: #ffde7c;
+  color:#1b1b1b;
+  font-weight: 500;
+}
+
 .span-id {
 	background:  linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
 	background-color: #eae0c2;
@@ -138,7 +145,6 @@ body {
 
 .footer {
   padding: 10px;
-  height: 100px;
   background: linear-gradient(to right, #4b4948, rgb(70, 63, 61));
   border-top: 1px solid #928d8b;
 }
@@ -149,5 +155,48 @@ body {
   align-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px;
+  grid-template-rows: 80px;
+  color:#c3b9b6;
+}
+
+.source-code {
+  display: block;
+  text-align: center;
+  color: #c3b9b6;
+  font-size: 12px;
+}
+
+.link {
+  color: rgb(165, 186, 206);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.github-logo {
+  max-height: 1rem;
+  max-width: auto;
+  vertical-align: -3px;
+}
+
+@media (max-width: 1200px) {
+  .page-wrapper {
+    width: 100%;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .sfx-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 850px) {
+  .sfx-list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
