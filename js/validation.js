@@ -27,6 +27,11 @@ $(function() {
   let counterHTML = $('#counter');
   let spoiler = $('#reveal');
 
+  spoiler
+    .attr('unselectable', 'on')
+    .css('user-select', 'none')
+    .on('selectstart', false);
+
   area.each(function (index, item) {
     item.oninput = function() {
       if (answers[index][1].includes(item.value.toLowerCase()))
@@ -44,10 +49,15 @@ $(function() {
   }
 
   let timeoutd = 0;
+
   $(spoiler).on('mousedown', function() {
     timeoutd = setTimeout(reveal, 2000);
   }).on('mouseup mouseleave', function() {
     clearTimeout(timeoutd);
+  });
+
+  $(spoiler).on('taphold', function() {
+    reveal();
   });
 
   function reveal() {
