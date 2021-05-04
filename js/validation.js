@@ -48,17 +48,20 @@ $(function() {
       $(counterHTML).addClass('completed');
   }
 
-  let timeoutd = 0;
+  let isTouchDevice = 'ontouchstart' in document.documentElement;
+  if (isTouchDevice) {
+    $(spoiler).on('tap', function() {
+      reveal();
+    })
+  } else {
+    let timeoutd = 0;
 
-  $(spoiler).on('mousedown', function() {
-    timeoutd = setTimeout(reveal, 2000);
-  }).on('mouseup mouseleave', function() {
-    clearTimeout(timeoutd);
-  });
-
-  $(spoiler).on('taphold', function() {
-    reveal();
-  });
+    $(spoiler).on('mousedown', function() {
+      timeoutd = setTimeout(reveal, 2000);
+    }).on('mouseup mouseleave', function() {
+      clearTimeout(timeoutd);
+    });
+  }
 
   function reveal() {
     area.each(function (index, item) {
