@@ -49,13 +49,15 @@ $(function() {
   }
 
   let isTouchDevice = 'ontouchstart' in document.documentElement;
-  if (isTouchDevice) {
-    $(spoiler).on('tap', function() {
-      reveal();
-    })
-  } else {
-    let timeoutd = 0;
+  let timeoutd = 0;
 
+  if (isTouchDevice) {
+    $(spoiler).on('touchstart', function() {
+      timeoutd = setTimeout(reveal, 2000);
+    }).on('touchend touchcancel', function() {
+      clearTimeout(timeoutd);
+    });
+  } else {
     $(spoiler).on('mousedown', function() {
       timeoutd = setTimeout(reveal, 2000);
     }).on('mouseup mouseleave', function() {
