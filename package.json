@@ -1,0 +1,26 @@
+{
+  "name": "sfx_quiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/audio.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShaidenUNI/SFX_Quiz.git"
+  },
+  "keywords": [
+    "sfx",
+    "quiz"
+  ],
+  "author": "Shaiden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShaidenUNI/SFX_Quiz/issues"
+  },
+  "homepage": "https://github.com/ShaidenUNI/SFX_Quiz#readme",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
