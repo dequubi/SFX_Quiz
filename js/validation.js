@@ -52,9 +52,8 @@ $(function() {
 
   function reveal() {
     area.each(function (index, item) {
-      if (!$(item).hasClass('correct')) {
+      if (!$(item).hasClass('correct'))
         unfold(index, item, 'spoiler');
-      }
     });
   }
 });
